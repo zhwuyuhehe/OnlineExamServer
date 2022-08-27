@@ -1,0 +1,51 @@
+@charset "UTF-8";
+body {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.waiting {
+    width: 60px;
+    height: 60px;
+    border: 2px black solid;
+    border-radius: 100%;
+    -webkit-animation: rotation 2970ms ease-in-out infinite;
+    -moz-animation: rotation 2970ms ease-in-out infinite;
+    animation: rotation 2970ms ease-in-out infinite;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.waiting:after {
+    background-color: black;
+    border-radius: 100%;
+    content: ".";
+    display: inline-table;
+}
+
+@-webkit-keyframes rotation {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotation {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

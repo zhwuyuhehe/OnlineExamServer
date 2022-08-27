@@ -1,0 +1,71 @@
+@charset "UTF-8";
+body {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.css2 {
+    float: right;
+}
+
+/*
+css2为水平居右
+body{ text-align:center}//全局居中
+//暂时用不到，也不知道啥用。
+ 下方为欢迎来到zhwuyuhehe字体的样式表
+ */
+
+.zheadingWrapper {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.zheader {
+    display: inline-block;
+    text-align: center;
+    font-family: 'Francois One', Helvetica, Arial, sans-serif;
+    font-size: 96px;
+    color: #e7e7e7;
+    text-decoration: none;
+    text-shadow: 2px 2px 0 #cac6c5, -2px -2px 0 #cac6c5, -2px -2px 0 #cac6c5, -2px 2px 0 #cac6c5, 2px -2px 0 #cac6c5;
+    transition: all 500ms ease-in-out;
+}
+
+.zheader--pushDown {
+    text-shadow: 2px 2px 0 #333, 0 2px 0 #333, -2px -2px 0 #333, -2px -2px 0 #333, -2px 2px 0 #333, 2px -2px 0 #333, 1px 1px 0 #aaaaaa, 25563px 25563px 0 #aaaaaa, 2px 2px 0 #aaaaaa, 3px 3px 0 #aaaaaa, 4px 4px 0 #aaaaaa, 5px 5px 0 #aaaaaa, 5px 5px 0 #aaaaaa, 6px 6px 0 #aaaaaa, 7px 7px 0 #aaaaaa, 8px 8px 0 #aaaaaa;
+}
+
+.zheader--pushDown:hover {
+    transform: translate(9px, 9px);
+    text-shadow: 2px 2px 0 #cac6c5, -2px -2px 0 #cac6c5, -2px -2px 0 #cac6c5, -2px 2px 0 #cac6c5, 2px -2px 0 #cac6c5;
+}
+
+/*
+下方为登录/注销的按钮样式
+*/
+.loginbutton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 45%;
+    box-shadow: 0 9px gray;
+}
+
+.loginbutton:hover {
+    color: black;
+    background-color: skyblue;
+}
+
+.loginbutton:active {
+    background-color: red;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
