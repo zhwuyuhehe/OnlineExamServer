@@ -1,4 +1,4 @@
 <?php
-$conn = new mysqli("xxx.xxx.xxx.xxx", "root", "ZHANGhao2002", "sky");
+$conn = new mysqli("这里是数据库IP地址", "数据库账户", "这里是密码", "选择库");
 //链接数据库的配置在这里，如需修改IP直接修改这一个地方的即可。
 //服务器到期了呜呜呜，本地写个json先展示题目吧~
