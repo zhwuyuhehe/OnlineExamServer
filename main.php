@@ -3,7 +3,7 @@
 echo "现在时间是 " . date("h:i:sa");
 
 
-$conn = new mysqli("8.142.76.205", "root", "ZHANGhao2002", "sky");
+$conn = new mysqli("这里是数据库IP", "数据库登录账户", "数据库密码", "选择的库");
 $result = $conn->query("SELECT * FROM `sky`.`question_data` WHERE examNum='1'");
 $rows = $result->fetch_all(MYSQLI_ASSOC);
 if ($rows) {
@@ -37,16 +37,16 @@ if (isset($_COOKIE["user"]))
     echo "欢迎 " . $_COOKIE["userlogin"] . "!<br>";
 else
     echo "普通访客!<br>";
-/*$servername = "www.zhwuyuhehe.com";
-$username = "root";
-$password = "ZHANGhao2002";
+/*$servername = "数据库地址";
+$username = "数据库登录账户";
+$password = "数据库密码";
 */
 
 
 /*
 // 创建连接
 $dbname ="sky";
-$conn = new mysqli("www.zhwuyuhehe.com", "root", "ZHANGhao2002","sky");
+$conn = new mysqli("数据库地址", "数据库登录账户", "数据库密码","选择的库");
 
 // 检测连接
 if ($conn->connect_error) {
