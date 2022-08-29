@@ -4,7 +4,7 @@ echo "现在时间是 " . date("h:i:sa");
 
 
 
-//$conn = new mysqli("8.142.76.205", "root", "ZHANGhao2002", "sky");
+//$conn = new mysqli("输入服务器地址", "数据库账户", "数据库密码", "数据库");
 //$result = $conn->query("SELECT * FROM `sky`.`question_data` WHERE examNum='1'");
 //$rows = $result->fetch_all(MYSQLI_ASSOC);
 //if ($rows) {
@@ -44,7 +44,7 @@ $password = "ZHANGhao2002";
 /*
 // 创建连接
 $dbname ="sky";
-$conn = new mysqli("www.zhwuyuhehe.com", "root", "ZHANGhao2002","sky");
+$conn = new mysqli("输入服务器地址", "数据库账户", "数据库密码", "数据库");
 
 // 检测连接
 if ($conn->connect_error) {
@@ -57,7 +57,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
 foreach ($rows as $row) {
     printf("%s [%s]\n", $row["username"], $row["password"]);
 }
-$research =$conn->query("SELECT * FROM `sky`.`userlogin` WHERE (username='1710734972@qq.com' OR usernum='20050101001')AND (password='123456')");
+$research =$conn->query("SELECT * FROM `sky`.`userlogin` WHERE (username='用户名' OR usernum='另一个用户名')AND (password='用户密码')");
 $rowresu =$research->fetch_all(MYSQLI_ASSOC);
 foreach ($rowresu as $rs2) {
     printf("%s\n", $rs2["usernum"]);
