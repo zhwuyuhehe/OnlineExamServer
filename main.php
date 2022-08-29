@@ -3,15 +3,16 @@
 echo "现在时间是 " . date("h:i:sa");
 
 
-$conn = new mysqli("8.142.76.205", "root", "ZHANGhao2002", "sky");
-$result = $conn->query("SELECT * FROM `sky`.`question_data` WHERE examNum='1'");
-$rows = $result->fetch_all(MYSQLI_ASSOC);
-if ($rows) {
-    foreach ($rows as $row) {
-        $examList = $row['examList'];
-        echo $examList;
-    }
-} else echo '未获取到题目';
+
+//$conn = new mysqli("8.142.76.205", "root", "ZHANGhao2002", "sky");
+//$result = $conn->query("SELECT * FROM `sky`.`question_data` WHERE examNum='1'");
+//$rows = $result->fetch_all(MYSQLI_ASSOC);
+//if ($rows) {
+//    foreach ($rows as $row) {
+//        $examList = $row['examList'];
+//        echo $examList;
+//    }
+//} else echo '未获取到题目';
 //session_name("wasd");
 //session_start();
 //echo session_name();
