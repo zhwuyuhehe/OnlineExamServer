@@ -29,9 +29,6 @@ echo $_SERVER['PHP_SELF'];
  */
 
 
-
-
-
 /*
 setcookie("test","your own cookies",time()+20);
 if (isset($_COOKIE["user"]))

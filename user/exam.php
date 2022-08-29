@@ -41,12 +41,12 @@
     //         ?>
 
 
-       let examList = [{
+    let examList = [{
         num: '1',
         type: '1', //1---文本题；2---单选择题；3---多选择题；
         title: '‘1+1’的答案是什么？',
         val: '',
-        tans:'2',
+        tans: '2',
         element: 'ele_textarea'
     },
         {
@@ -187,7 +187,7 @@
 
     function end() {
         console.log(examList.map(e => {
-            if (e.val == e.tans){
+            if (e.val == e.tans) {
                 score++;
             }
             return e.val

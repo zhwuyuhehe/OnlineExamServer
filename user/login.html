@@ -1,74 +1,76 @@
 <!DOCTYPE html>
 <html lang="zh_CN">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
-		<title>登录页</title>
-		<link rel="stylesheet" type="text/css" href="../css/common.css" />
-		<link rel="stylesheet" type="text/css" href="../layui/css/layui.css" />
-		<script src="../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../layui/layui.js" type="text/javascript" charset="utf-8"></script>
-	</head>
-	<body class="container_log">
-		<div class="log_group">
-			<div class="log_input">
-				<label class="_label" for="loginName">请输入用户名</label>
-				<input type="text" id="loginName" class="" placeholder="用户名"/>
-			</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+    <title>登录页</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../layui/css/layui.css"/>
+    <script src="../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../layui/layui.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body class="container_log">
+<div class="log_group">
+    <div class="log_input">
+        <label class="_label" for="loginName">请输入用户名</label>
+        <input type="text" id="loginName" class="" placeholder="用户名"/>
+    </div>
 
-			<div class="log_input">
-				<label class="_label" for="loginPassword">请输入密码</label>
-				<input type="text" id="loginPassword" class="grid-demo grid-demo-bg2" placeholder="密码" />
-			</div>
-			<div class="log_btn">
-				<button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" onclick="toLogin()">登录</button>
-			</div>
-		</div>
-		<script type="text/javascript">
-			
-
-			function toLogin() {
-				let name = $('#loginName').val();
-				let password = $('#loginPassword').val();
-				if (!name) {
-					layer.msg('用户名不可为空！');
-					return
-				}
-				if (!password) {
-					layer.msg('密码不可为空！');
-					return
-				}
-				let info1={
-					sex:'1',
-					name:'小明',
-					grade:'20'
-				}
-				let info2={
-					sex:'2',
-					name:'嘎嘎',
-					grade:'50'
-				}
-				let info=name.indexOf('1')>-1?JSON.stringify(info1):JSON.stringify(info2);
-				console.log(info,"  ===info",JSON.parse(info));
-				location.href="./index.html?info="+escape(info);
-				// 调用接口传给后台
-
-				// let url = "localhost"; //后台接口地址
-				// $.ajax({
-				// 	url: url,
-				// 	async: true,
-				// 	type: 'post',
-				// 	data: {
-				// 		name: name,
-				// 		pass: password
-				// 	},
-				// 	success: function(res) {
-				// 		console.log(res, "  ===000")
-				// 	}
-				// });
+    <div class="log_input">
+        <label class="_label" for="loginPassword">请输入密码</label>
+        <input type="text" id="loginPassword" class="grid-demo grid-demo-bg2" placeholder="密码"/>
+    </div>
+    <div class="log_btn">
+        <button type="button" class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" onclick="toLogin()">
+            登录
+        </button>
+    </div>
+</div>
+<script type="text/javascript">
 
 
-			}
-		</script>
-	</body>
+    function toLogin() {
+        let name = $('#loginName').val();
+        let password = $('#loginPassword').val();
+        if (!name) {
+            layer.msg('用户名不可为空！');
+            return
+        }
+        if (!password) {
+            layer.msg('密码不可为空！');
+            return
+        }
+        let info1 = {
+            sex: '1',
+            name: '小明',
+            grade: '20'
+        }
+        let info2 = {
+            sex: '2',
+            name: '嘎嘎',
+            grade: '50'
+        }
+        let info = name.indexOf('1') > -1 ? JSON.stringify(info1) : JSON.stringify(info2);
+        console.log(info, "  ===info", JSON.parse(info));
+        location.href = "./index.html?info=" + escape(info);
+        // 调用接口传给后台
+
+        // let url = "localhost"; //后台接口地址
+        // $.ajax({
+        // 	url: url,
+        // 	async: true,
+        // 	type: 'post',
+        // 	data: {
+        // 		name: name,
+        // 		pass: password
+        // 	},
+        // 	success: function(res) {
+        // 		console.log(res, "  ===000")
+        // 	}
+        // });
+
+
+    }
+</script>
+</body>
 </html>

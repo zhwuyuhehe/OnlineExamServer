@@ -13,7 +13,8 @@ if (isset($_COOKIE['user_login']))
 ?>
 <a href="index.php" title="返回首页"><img src="img/logo.png" alt="logo"></a>
 <div class="zheadingWrapper">
-    <a href="login.php" class="zheader zheader--pushDown zheader--shadow" title="点击进入登录页面">欢迎来到zhwuyuhehe</a>
+    <a href="login.php" class="zheader zheader--pushDown zheader--shadow"
+       title="点击进入登录页面">欢迎来到zhwuyuhehe</a>
 </div>
 <h3><?php require 'functions/population_function.php';
     new total(); ?></h3>

@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh_CN">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +7,7 @@
 </head>
 <body>
 <?php
-if (!isset($_COOKIE['user_login'])){
+if (!isset($_COOKIE['user_login'])) {
     echo '<script type="text/javascript">alert("请先登录");location.href="login.php";</script>';
 }
 require 'functions/logout_function.php';
@@ -17,7 +16,7 @@ require 'functions/logout_function.php';
     <a class="disc l1">
 
         <form id="check_out" name="check_out" method="POST"
-            action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+              action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <div onclick="document.getElementById('check_out').submit()">退出登录</div>
             <input type="hidden" name="out" value="退出登录">
         </form>

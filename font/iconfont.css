@@ -1,37 +1,37 @@
 @font-face {
-  font-family: "iconfont"; /* Project id  */
-  src: url('iconfont.ttf?t=1627724724868') format('truetype');
+    font-family: "iconfont"; /* Project id  */
+    src: url('iconfont.ttf?t=1627724724868') format('truetype');
 }
 
 .iconfont {
-  font-family: "iconfont" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-icon4:before {
-  content: "\e606";
+    content: "\e606";
 }
 
 .icon-dengluyonghu:before {
-  content: "\e608";
+    content: "\e608";
 }
 
 .icon-fanhui:before {
-  content: "\e612";
+    content: "\e612";
 }
 
 .icon-chengji:before {
-  content: "\e727";
+    content: "\e727";
 }
 
 .icon-denglu-mima:before {
-  content: "\e60b";
+    content: "\e60b";
 }
 
 .icon-kaoshi:before {
-  content: "\e72b";
+    content: "\e72b";
 }
 

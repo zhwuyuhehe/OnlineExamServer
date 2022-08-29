@@ -98,19 +98,19 @@ require 'user_logout_function.php';
             layer.msg('进入答题功能出错，无法获取用户名。');
             return
         }
-        let info1={
-            sex:'1',
-            name:name,
-            grade:'20'
+        let info1 = {
+            sex: '1',
+            name: name,
+            grade: '20'
         }
-        let info2={
-            sex:'2',
-            name:name,
-            grade:'50'
+        let info2 = {
+            sex: '2',
+            name: name,
+            grade: '50'
         }
-        let info=name.indexOf('1')>-1?JSON.stringify(info1):JSON.stringify(info2);
-        console.log(info,"  ===info",JSON.parse(info));
-        location.href="index.php?info="+escape(info);
+        let info = name.indexOf('1') > -1 ? JSON.stringify(info1) : JSON.stringify(info2);
+        console.log(info, "  ===info", JSON.parse(info));
+        location.href = "index.php?info=" + escape(info);
 
     }
 </script>

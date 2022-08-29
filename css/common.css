@@ -1,21 +1,21 @@
 /* --common */
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-size: 14px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 
 html, body {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 ._label {
-	width: 100%;
-	font-size: 16px;
-	text-align: center;
-	/*padding-right: 10px;*/
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    /*padding-right: 10px;*/
 }
 
 /*._input {*/
@@ -35,234 +35,234 @@ html, body {
 /*}*/
 
 ._hidden {
-	display: none !important;
+    display: none !important;
 }
 
 /* login */
 .container_log {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-image: url(../img/user_page_background.png);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/user_page_background.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 .log_group {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 90%;
-	border-radius: 2rem;
-	height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border-radius: 2rem;
+    height: 20rem;
 }
 
 .log_title {
-	padding-bottom: 5rem;
-	font-size: 4rem;
+    padding-bottom: 5rem;
+    font-size: 4rem;
 }
 
 .log_input {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 10px;
-	width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
 }
 
 .log_input ._input {
-	width: 90%;
-	background-color: rgba(255, 255, 255, 0.4);
-	border-radius: 8px;
-	border: none;
-	font-size: 18px;
-	color: #fff;
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    color: #fff;
 }
 
 .log_input input::-webkit-input-placeholder {
-	/*WebKit browsers*/
-	color: #bbb;
-	font-size: 1rem;
+    /*WebKit browsers*/
+    color: #bbb;
+    font-size: 1rem;
 }
 
 .log_btn {
-	margin-top: 20px;
-	width: 100%;
-	text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
 }
 
 .log_btn ._btn {
-	width: 60%;
-	border-radius: 2rem;
-	background-color: #53A7FF;
-	font-size: 16px;
+    width: 60%;
+    border-radius: 2rem;
+    background-color: #53A7FF;
+    font-size: 16px;
 }
 
 /* --INDEX */
 .container_index {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 
 }
 
 .container_index .header {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	padding: 1.5rem;
-	background-color: #282C35;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #282C35;
 }
 
-.container_index .header>div {
-	flex: 1;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+.container_index .header > div {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .container_index .header ._user {
-	justify-content: flex-start;
+    justify-content: flex-start;
 }
 
 .container_index .header ._user img {
-	width: 6rem;
-	height: 6rem;
-	border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
 }
 
 .container_index .header .user_img {
-	display: block;
+    display: block;
 }
 
 .container_index .header .user_name {
-	color: #fff;
-	font-size: 1.5rem;
-	width: 8rem;
-	text-align: center;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 8rem;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .container_index .header ._grade {
-	justify-content: flex-end;
+    justify-content: flex-end;
 }
 
 .container_index .header ._grade .iconfont {
-	font-size: 2rem;
-	color: #39E174;
+    font-size: 2rem;
+    color: #39E174;
 }
 
 .container_index .header ._grade ._number {
-	font-size: 1.5rem;
-	color: #fff;
-	padding: 0 0.2rem;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 0 0.2rem;
 }
 
 .container_index .handle_list {
-	height: calc(100% - 9rem);
-	width: 100%;
-	padding: 2rem 3rem;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
+    height: calc(100% - 9rem);
+    width: 100%;
+    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .container_index .handle_list .h_l_item {
-	width: 80%;
-	background-image: linear-gradient(to right, #029AB5, #1D78AF, #5F3EA6);
-	height: 5rem;
-	border-radius: 5rem;
-	color: #fff;
-	font-size: 2rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: row;
+    width: 80%;
+    background-image: linear-gradient(to right, #029AB5, #1D78AF, #5F3EA6);
+    height: 5rem;
+    border-radius: 5rem;
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
 }
 
 .container_index .handle_list .h_l_item .iconfont {
-	font-size: 2rem;
-	margin-right: 0.5rem;
-	margin-top: 0.3rem;
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    margin-top: 0.3rem;
 
 }
 
 .container_index ._back,
-.container_exam ._back{
-	position: fixed;
-	bottom: 10px;
-	background-color: rgba(0, 0, 0, .85);
-	padding: 0.65rem 0.8rem 0.65rem 0.9rem;
-	border-radius: 50%;
+.container_exam ._back {
+    position: fixed;
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, .85);
+    padding: 0.65rem 0.8rem 0.65rem 0.9rem;
+    border-radius: 50%;
 
 }
 
-.container_index ._back .iconfont ,
-.container_exam ._back .iconfont{
-	font-size: 3rem;
-	color: #fff;
+.container_index ._back .iconfont,
+.container_exam ._back .iconfont {
+    font-size: 3rem;
+    color: #fff;
 }
 
 /* exam */
 .container_exam {
-	background-image: linear-gradient(180deg, #029AB5, #1D78AF, #5F3EA6);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: row;
-	position: relative;
+    background-image: linear-gradient(180deg, #029AB5, #1D78AF, #5F3EA6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
 }
 
 .container_exam .exam_group {
-	width: 80%;
-	/* height: 45rem; */
-	border-radius: 1rem;
-	background-color: rgba(255, 255, 255, 0.5);
-	padding: 1.5rem;
+    width: 80%;
+    /* height: 45rem; */
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1.5rem;
 }
 
 
 .container_exam .exam_group ._title {
-	font-size: 1.2rem;
-	padding-bottom: 0.8rem;
+    font-size: 1.2rem;
+    padding-bottom: 0.8rem;
 }
 
 .container_exam .exam_textarea {
-	resize: none;
-	width: 100%;
-	height: 18rem;
-	border-radius: 0.7rem;
-	font-size: 1.2rem;
-	padding: 0.5rem 0.8rem;
-	border-color: #fff;
+    resize: none;
+    width: 100%;
+    height: 18rem;
+    border-radius: 0.7rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.8rem;
+    border-color: #fff;
 }
 
 .container_exam ._next {
-	background-color: #4395FF;
-	display: block;
-	margin: 5rem auto 2rem;
+    background-color: #4395FF;
+    display: block;
+    margin: 5rem auto 2rem;
 }
 
 .container_exam ._line {
-	font-size: 1.2rem;
-	padding: 0.5rem;
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .container_exam #_radio input[type='radio'],
 .container_exam #_checkbox input[type='checkbox'] {
-	width: 15px;
-	height: 15px;
-	margin-right: 0.5rem;
+    width: 15px;
+    height: 15px;
+    margin-right: 0.5rem;
 }
