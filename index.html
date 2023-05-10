@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>请登录</title>
+    <link href="./layui/css/layui.css" type="text/css" rel="stylesheet">
+    <script src="./layui/layui.js" type="text/javascript"></script>
+    <script src="jquery-3.6.4.js" type="text/javascript"></script>
+    <style>
+        .demo-reg-container{width: 320px; margin: 21px auto 0;}
+        .demo-reg-other .layui-icon{position: relative; display: inline-block; margin: 0 2px; top: 2px; font-size: 26px;}
+    </style>
+</head>
+<body>
+
+<form class="layui-form" lay-filter="my_form">
+    <div class="demo-reg-container">
+        <div class="layui-form-item">
+            <div class="layui-row">
+                <div class="layui-col-xs7">
+                    <div class="layui-input-wrap">
+                        <div class="layui-input-prefix">
+                            <i class="layui-icon layui-icon-cellphone"></i>
+                        </div>
+                        <input type="text" name="手机号" id="phoneNum" value="" lay-verify="my_phone" placeholder="手机号" lay-reqtext="请填写手机号" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-xs5">
+                    <div style="margin-left: 11px;">
+                        <button type="button" id="verCode" class="layui-btn layui-btn-fluid layui-btn-primary" lay-on="reg-get-vercode">获取验证码</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-wrap">
+                <div class="layui-input-prefix">
+                    <i class="layui-icon layui-icon-vercode"></i>
+                </div>
+                <input type="text" name="验证码" value="" lay-verify="required" placeholder="验证码" lay-reqtext="请填写验证码" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-wrap">
+                <div class="layui-input-prefix">
+                    <i class="layui-icon layui-icon-password"></i>
+                </div>
+                <input type="password" name="密码" id="pwd" value="" lay-verify="my_user_pwd" placeholder="密码" autocomplete="off" class="layui-input" lay-affix="eye">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-wrap">
+                <div class="layui-input-prefix">
+                    <i class="layui-icon layui-icon-password"></i>
+                </div>
+                <input type="password" name="confirmPwd" value="" lay-verify="confirmPwd" placeholder="确认密码" autocomplete="off" class="layui-input" lay-affix="eye">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-wrap">
+                <div class="layui-input-prefix">
+                    <i class="layui-icon layui-icon-username"></i>
+                </div>
+                <input type="text" name="nickname" value="" lay-verify="required" placeholder="昵称" autocomplete="off" class="layui-input" lay-affix="clear">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="demo-reg">注册</button>
+        </div>
+        <div class="layui-form-item">
+            <button class="layui-btn" lay-filter="demo1" lay-submit>提交</button>
+            <button class="layui-btn" lay-filter="demo2" lay-submit="">跳转</button>
+            <button class="layui-btn layui-btn-primary" type="reset">重置</button>
+            <button class="layui-btn layui-btn-normal" id="LAY-component-form-setval" type="button">赋值</button>
+        </div>
+    </div>
+</form>
+<script>
+    layui.use(function(){
+        let form = layui.form;
+        let layer = layui.layer;
+        let util = layui.util;
+        //自定义验证规则
+        form.verify({
+            my_user_pwd: [
+                /^(?!^(\d+|[a-z]+|[A-Z]+)$)[\da-zA-Z]{8,16}$/
+                , '密码必须8到16位，只能包含字母和数字。'
+            ],
+            my_phone: [
+                /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/
+                , '请输入正确的手机号。例：15137166683'
+            ],
+            confirmPwd: function(value){
+                let passwordValue = $('#pwd').val();
+                if(value !== passwordValue){
+                    return '两次密码输入不一致';
+                }
+            }
+        });
+        // 提交事件
+        form.on('submit(demo-reg)', function(data){
+            let field = data.field; // 获取表单字段值
+
+            // 显示填写结果，仅作演示用
+            layer.alert(JSON.stringify(field), {
+                title: '当前填写的字段值'
+            });
+
+            // 此处可执行 Ajax 等操作
+            // …
+
+            return false; // 阻止默认 form 跳转
+        });
+
+        $('#verCode').on('click', function(){
+            var isValid = form.validate('#phoneNum');  // 主动触发验证，v2.7.0 新增
+            // 验证通过
+            if(isValid){
+                layer.msg('手机号规则验证通过');
+                // 此处可继续书写「发送验证码」等后续逻辑
+                // …
+            }
+        });
+        form.on('submit(demo1)', function (data) {
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+        layui.$('#LAY-component-form-setval').on('click', function () {
+            form.val('my_form', {
+                "手机号": "15137166683" // "name": "value"
+                ,"验证码": "123456"
+                , "密码": "ZHzh2002"
+                , "confirmPwd": "ZHzh2002"
+                , "nickname": "我的昵称"
+            });
+        });
+
+    });
+</script>
+
+
+</body>
+</html>
