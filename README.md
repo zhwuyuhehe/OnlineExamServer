@@ -1,5 +1,4 @@
 # OnlineExamServer
-Config files for my GitHub profile.
 
 一个用PHP写的在线答题系统。
 
